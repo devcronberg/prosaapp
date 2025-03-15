@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProsaApp.ConsoleUI", "Prosa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProsaApp.Domain", "ProsaApp.Domain\ProsaApp.Domain.csproj", "{63B9303B-A724-45F5-89D4-FA76BF62DD5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProsaApp.Data", "ProsaApp.Data\ProsaApp.Data.csproj", "{4D292991-61A6-4D45-B34D-F71444592AE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{63B9303B-A724-45F5-89D4-FA76BF62DD5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63B9303B-A724-45F5-89D4-FA76BF62DD5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63B9303B-A724-45F5-89D4-FA76BF62DD5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D292991-61A6-4D45-B34D-F71444592AE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D292991-61A6-4D45-B34D-F71444592AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D292991-61A6-4D45-B34D-F71444592AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D292991-61A6-4D45-B34D-F71444592AE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
