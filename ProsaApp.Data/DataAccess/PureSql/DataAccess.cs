@@ -158,4 +158,26 @@ public class DatabaseHelper
 
         return dataTable;
     }
+
+    /// <summary>
+    /// Checks if the connection to the database is OK.
+    /// </summary>
+    /// <param name="logger">The logger to log information and errors.</param>
+    /// <returns>True if the connection is OK, otherwise false.</returns>
+    public bool ConnectionOk(ILogger logger)
+    {
+        try
+        {
+            using var connection = new SqliteConnection(_connectionString);
+            connection.Open();
+            connection.Close();
+            logger.LogInformation("Database connection is OK.");
+            return true;
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "Database connection failed.");
+            return false;
+        }
+    }
 }
