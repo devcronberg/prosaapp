@@ -45,8 +45,19 @@ class Program
         //ShowDataFromMockDataService(logger);
         //ShowDataFromEfDataService(logger, connectionString);
         //ShowDataUsingFactory(logger, connectionString);
+        ShowDataUsingDi(logger, connectionString);
 
         logger.LogInformation("App end");
+    }
+
+    static void ShowDataUsingDi(Microsoft.Extensions.Logging.ILogger logger, string connectionString)
+    {
+        logger.LogInformation("Getting all customers from database using context");
+        var context = new DataContext(new ProsaApp.Data.DataAccess.Ef.EfDataAccessService(connectionString));
+        //var context = new DataContext(new ProsaApp.Data.DataAccess.Mock.MockDataAccessService());
+        var customers = context.GetAllCustomers(logger);
+        foreach (var customer in customers)
+            logger.LogInformation(customer.ToString());
     }
 
     static void ShowDataUsingFactory(Microsoft.Extensions.Logging.ILogger logger, string connectionString)
