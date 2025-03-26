@@ -1,9 +1,11 @@
 using System.Data;
 using Microsoft.Extensions.Logging;
+using ProsaApp.Domain.Types;
 
 namespace ProsaApp.Data.DataAccess.Services;
 
 public interface IDataAccess
 {
-    DataTable GetAllCustomers(ILogger logger);
+    IEnumerable<Customer> GetAllCustomers(ILogger logger);
+
 }

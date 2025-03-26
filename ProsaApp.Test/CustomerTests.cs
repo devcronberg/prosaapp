@@ -4,11 +4,7 @@ namespace ProsaApp.Test
 {
     public class CustomerTests
     {
-        [Fact]
-        public void CustomerTests_ShouldReturnNewCustomerObject2()
-        { 
-            Assert.True(false);
-        }
+
         [Fact]
         public void CustomerTests_ShouldReturnNewCustomerObject()
         {

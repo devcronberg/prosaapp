@@ -11,4 +11,8 @@ public class Customer
     public bool IsActive { get; set; }
     public List<string> Tags { get; set; } = new();
 
+    public override string ToString()
+    {
+        return $"Customer: {Id} {Name} {Age} {Country} {Revenue} {CreatedDate} {IsActive} {string.Join(", ", Tags)}";
+    }
 }

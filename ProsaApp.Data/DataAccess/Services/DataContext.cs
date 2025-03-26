@@ -1,5 +1,6 @@
 using System.Data;
 using Microsoft.Extensions.Logging;
+using ProsaApp.Domain.Types;
 
 namespace ProsaApp.Data.DataAccess.Services;
 
@@ -13,7 +14,7 @@ public class DataContext
         this.dataAccess = dataAccess;
     }
 
-    public DataTable GetAllCustomers(ILogger logger)
+    public IEnumerable<Customer> GetAllCustomers(ILogger logger)
     {
         return dataAccess.GetAllCustomers(logger);
     }
